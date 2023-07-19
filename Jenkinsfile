@@ -35,11 +35,11 @@ pipeline {
                
 
                 steps {
-                    withCredentials([string(credentialsId: 'ravianil203', variable: 'dckr_pat_nufid6s8OqUk9SB5xtdMt5-r1Lw')]) {
+                    withCredentials([string(credentialsId: 'ravianil203', variable: 'dckr_pat_qXAqmTec58r2zGHOIMksgma0fm0')]) {
 
 
                     sh 'docker build . -t ravianil203/app30:test'
-                    sh 'docker login -u ravianil203 -p ${dckr_pat_nufid6s8OqUk9SB5xtdMt5-r1Lw}'
+                    sh 'docker login -u ravianil203 -p ${dckr_pat_qXAqmTec58r2zGHOIMksgma0fm0}'
                     sh 'docker push ravianil203/app30:test'
                    // sh 'docker run -p 8111:8080 -d ravianil203/app30:test'
                 }
