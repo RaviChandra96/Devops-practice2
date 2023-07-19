@@ -36,7 +36,7 @@ pipeline {
                 steps {
                      
                     sh 'docker build . -t ravianil203/app30:test'
-                    sh 'docker login -u ravianil203 -p ${dckr_pat_qXAqmTec58r2zGHOIMksgma0fm0}'
+                    sh 'docker login -u ravianil203 -p dckr_pat_qXAqmTec58r2zGHOIMksgma0fm0'
                     sh 'docker push ravianil203/app30:test'
                    // sh 'docker run -p 8111:8080 -d ravianil203/app30:test'
 
