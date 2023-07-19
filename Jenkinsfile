@@ -35,7 +35,7 @@ pipeline {
                
 
                 steps {
-                    withCredentials([string(credentialsId: 'RAVIANIL203', variable: 'dckr_pat_qXAqmTec58r2zGHOIMksgma0fm0')]) {
+                     {
 
 
                     sh 'docker build . -t ravianil203/app30:test'
