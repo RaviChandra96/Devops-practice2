@@ -17,7 +17,7 @@ pipeline {
             stage ('AppCodeCheckout') {
                 steps {
 
-                    git 'https://github.com/gcpcloudreddy/pylife-devops-demo.git'
+                    git 'https://github.com/RaviChandra96/Devops-practice2.git'
 
                 }
             }
@@ -35,13 +35,13 @@ pipeline {
                
 
                 steps {
-                    withCredentials([string(credentialsId: 'DOCKERPWD', variable: 'DOCKER_TOKEN')]) {
+                    withCredentials([string(credentialsId: 'ravianil203', variable: 'dckr_pat_nufid6s8OqUk9SB5xtdMt5-r1Lw')]) {
 
 
-                    sh 'docker build . -t pylifedevops/app30:test'
-                    sh 'docker login -u pylifedevops -p ${DOCKER_TOKEN}'
-                    sh 'docker push pylifedevops/app30:test'
-                   // sh 'docker run -p 89:8080 -d pylifedevops/app30:test'
+                    sh 'docker build . -t ravianil203/app30:test'
+                    sh 'docker login -u ravianil203 -p ${dckr_pat_nufid6s8OqUk9SB5xtdMt5-r1Lw}'
+                    sh 'docker push ravianil203/app30:test'
+                   // sh 'docker run -p 8111:8080 -d ravianil203/app30:test'
                 }
 
                 }
